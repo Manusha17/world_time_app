@@ -30,9 +30,9 @@ class _LoadingState extends State<Loading> {
     return Scaffold(
       backgroundColor: Colors.blue[900],
       body: Center(
-        child:SpinKitCubeGrid(
+        child:SpinKitDualRing(
         color: Colors.white,
-        size: 60.0,
+        size: 50.0,
         ),
       ),
     );

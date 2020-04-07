@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:worldtimeapp/services/world_time.dart';
 
 class ChooseLocation extends StatefulWidget {
@@ -20,6 +21,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
     WorldTime(url: 'Asia/Tokyo', location: 'Tokyo', flag: 'jap.jpg'),
     WorldTime(url: 'Asia/Kolkata', location: 'Kolkata', flag: 'india.jpg'),
     WorldTime(url: 'Asia/Jakarta', location: 'Jakarta', flag: 'indonesia.png'),
+    WorldTime(url: 'Europe/Prague', location: 'Prague', flag: 'prague.png'),
   ];
 
   void updateTime(index) async{
@@ -51,6 +53,12 @@ class _ChooseLocationState extends State<ChooseLocation> {
               child: ListTile(
                 onTap: () {
                   updateTime(index);
+                  return Center(
+                    child:SpinKitDualRing(
+                      color: Colors.blue[800],
+                      size: 50.0,
+                    ),
+                  );
                 },
                 title: Text(locations[index].location),
                 leading: CircleAvatar(

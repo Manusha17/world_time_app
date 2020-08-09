@@ -1,2 +1,2 @@
 # world_time_app
- Application to view time in countries around the world
+An application to view time in countries around the world with a beautiful background picture of the country's iconic locations.
